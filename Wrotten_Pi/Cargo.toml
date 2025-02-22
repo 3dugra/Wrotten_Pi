@@ -1,7 +1,8 @@
 [package]
 name = "crate_name"
 version = "0.1.0"
-authors = ["Author Name <author@example.com>"]
+authors = ["Author Name <eduardogueca@gmail.com>"]
+edition = "2021"
 
 # the profile used for `cargo build`
 [profile.dev]
