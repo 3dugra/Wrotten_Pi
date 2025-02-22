@@ -1,7 +1,8 @@
 [package]
-name = "crate_name"
-version = "0.1.0"
+name = "Wrotten_Pi"
+version = "0.0.1"
 authors = ["Author Name <eduardogueca@gmail.com>"]
+build = "build.rs"
 edition = "2021"
 
 # the profile used for `cargo build`
@@ -11,3 +12,7 @@ panic = "abort" # disable stack unwinding on panic
 # the profile used for `cargo build --release`
 [profile.release]
 panic = "abort" # disable stack unwinding on panic
+
+[build]
+script = "arm-none-eabi-objcopy -O binary your-kernel.elf kernel7.img"
+rustflags = ["-C", "link-arg=-Tlinker.ld"]

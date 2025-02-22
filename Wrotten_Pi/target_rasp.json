@@ -9,5 +9,10 @@
     "vendor": "unknown",
     "linker-flavor": "gcc",
     "linker": "arm-none-eabi-gcc",
-    "features": "+v7,+thumb2,+vfp3"
+    "target-cpu": "cortex-a9",
+    "features": "+v7,+thumb2,+vfp3",
+    "pre-link-args": {
+        "gcc": ["-nostartfiles", "-nostdlib", "-mfloat-abi=hard"]
+    },
+    "crt-static": false
 }
